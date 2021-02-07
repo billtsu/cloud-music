@@ -1,7 +1,8 @@
 import React from 'react';
 import Slider from '../../components/Slider';
 import RecommendList from '../../components/list';
-
+import { Content } from './style'
+import Scroll from '../../components/scroll';
 
 function Recommend(props){
     // mock 数据
@@ -17,10 +18,14 @@ function Recommend(props){
             name: "朴树、许巍、李健、郑钧、老狼、赵雷"
         }
     });
-    return <div>
-        <Slider bannerList={bannerList}></Slider>
-        <RecommendList recommendList={recommendList}></RecommendList>
-    </div>
+    return <Content>
+        <Scroll className='list'>
+        <div>
+            <Slider bannerList={bannerList}></Slider>
+            <RecommendList recommendList={recommendList}></RecommendList>
+        </div>
+        </Scroll>
+    </Content>
 }
 
 export default React.memo(Recommend);
