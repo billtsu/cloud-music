@@ -12,7 +12,7 @@ function App() {
     <HashRouter>
       <GlobalStyle></GlobalStyle>
       <IconStyle></IconStyle>
-      <i className='iconfont'>&#xe62b;</i>
+      {/* <i className='iconfont'>&#xe62b;</i> */}
       { renderRoutes(routes)} 
     </HashRouter>
     </Provider>
